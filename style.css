@@ -238,12 +238,12 @@ body {
 }
 
 .resume-image {
-    left: 870px; /* Adjust the left position as needed for increased spacing */
+    left: 850px; /* Adjust the left position as needed for increased spacing */
     bottom: 10px; /* Adjust the bottom position as needed */
 }
 
 .email-image {
-    left: 1110px; /* Adjust the left position as needed for increased spacing */
+    left: 1090px; /* Adjust the left position as needed for increased spacing */
     bottom: 10px; /* Adjust the bottom position as needed */
 }
 
