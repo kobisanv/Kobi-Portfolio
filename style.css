@@ -1,0 +1,358 @@
+/* Reset default styles for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    background: transparent;
+}
+
+/* Styling for the body element */
+body {
+    background: black; /* Set background color to black */
+    color: ghostwhite; /* Set text color to white */
+    overflow: hidden; /* Hide overflowing content */
+    overflow-y: scroll; /* Enable vertical scrolling if content overflows */
+    font-family: 'Ostrich Sans', sans-serif; /* Set custom font family */
+}
+
+/* Define a custom font face for 'Ostrich Sans' */
+@font-face {
+    font-family: 'Ostrich Sans'; /* Define font family name */
+    src: url('ostrich-rounded.ttf') format('truetype'); /* Specify font file and format */
+}
+
+/* Styling for the header element */
+header {
+    background: rgba(0, 0, 0, 0); /* Set background color with alpha transparency */
+    color: ghostwhite; /* Set text color to white */
+    padding: 10px 22px; /* Set padding for the header */
+    margin: 0; /* Remove margins */
+    position: fixed; /* Fix the header position */
+    width: 100%; /* Set header width to 100% */
+    top: 0; /* Place the header at the top */
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space items evenly in the header */
+    align-items: center; /* Center items vertically in the header */
+}
+
+/* Styling for the logo within the header */
+.logo {
+    margin-top: 10px;
+    margin-right: 25px; /* Set right margin for the logo so logo doesn't sit at left edge */
+}
+
+.logo img {
+    max-width: 40px; /* 40 percent of actual height */
+    height: auto; /* Also 40 percent of actual width */
+}
+
+/* Remove default list styles and alignment */
+nav ul {
+    list-style: none; /* Remove default list styles (bullet points, etc.) */
+    text-align: center; /* Center the text within the <nav> element */
+    margin: 0; /* Remove any default margin */
+    padding: 0; /* Remove any default padding */
+    display: flex; /* Use flexbox for layout */
+}
+
+/* Styling for list items in the navigation menu */
+nav ul li {
+    margin: 0 30px; /* Set margins for list items */
+}
+
+/* Styling for links in the navigation menu */
+nav ul li a {
+    text-decoration: none; /* Remove underline from links */
+    color: ghostwhite; /* Set link text color to white */
+    font-family: 'Ostrich Sans', sans-serif; /* Set font family for links */
+    font-weight: bold; /* Set font weight to bold */
+    font-size: 20px; /* Set font size */
+    transition: 0.7s ease; /* Apply smooth transition effect */
+}
+
+/* Styling for link hover effect */
+.home-link:hover {
+    color: ghostwhite; /* Change link text color on hover */
+    transition: 0.7s; /* Apply smooth transition effect */
+    font-weight: bolder; /* Set bolder font weight on hover */
+    font-size: 30px; /* Increase font size on hover */
+}
+
+.about-link:hover {
+    color: ghostwhite; /* Change link text color on hover */
+    transition: 0.7s; /* Apply smooth transition effect */
+    font-weight: bolder; /* Set bolder font weight on hover */
+    font-size: 30px; /* Increase font size on hover */
+}
+
+.projects-link:hover {
+    color: ghostwhite; /* Change link text color on hover */
+    transition: 0.7s; /* Apply smooth transition effect */
+    font-weight: bolder; /* Set bolder font weight on hover */
+    font-size: 30px; /* Increase font size on hover */
+}
+
+.contact-link:hover {
+    color: ghostwhite; /* Change link text color on hover */
+    transition: 0.7s; /* Apply smooth transition effect */
+    font-weight: bolder; /* Set bolder font weight on hover */
+    font-size: 30px; /* Increase font size on hover */
+}
+
+/* Additional styling for the body element */
+body {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Arrange child elements in a column */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    height: 100vh; /* Set body height to 100% of viewport height */
+    margin: 0; /* Remove margins */
+    background: black; /* Set background color to black */
+    color: ghostwhite; /* Set text color to white */
+    overflow: hidden; /* Hide overflowing content */
+    font-family: 'Ostrich Sans', sans-serif; /* Set font family */
+}
+
+/* Styling for an element with id 'vanta-bg' */
+#vanta-bg {
+    position: fixed; /* Fix the element position */
+    top: 0; /* Place the element at the top */
+    left: 0; /* Place the element at the left */
+    width: 100vw; /* Set element width to 100% of viewport width */
+    height: 100vh; /* Set element height to 100% of viewport height */
+    z-index: -1; /* Set a lower z-index value for the background */
+}
+
+/* Typewriter effect animation for an h1 element within an element with class 'typewriter' */
+.typewriter h1 {
+    overflow: hidden; /* Hide overflowing content */
+    border-right: 0.1em ghostwhite; /* Create a typing cursor effect with a right border */
+    white-space: nowrap; /* Prevent text from wrapping */
+    margin: 0 auto; /* Center the element horizontally */
+    letter-spacing: 0.15em; /* Set letter spacing */
+    animation: typing 3s steps(40, end), blink-caret 1s step-end infinite; /* Apply typing animation */
+    z-index: 1; /* Set a higher z-index value for the typewriter text */
+}
+
+.typewriter p {
+    overflow: hidden; /* Hide overflowing content */
+    border-right: 0.1em ghostwhite; /* Create a typing cursor effect with a right border */
+    white-space: nowrap; /* Prevent text from wrapping */
+    margin: 0 auto; /* Center the element horizontally */
+    letter-spacing: 0.15em; /* Set letter spacing */
+    animation: typing 3s steps(40, end), blink-caret 1s step-end infinite; /* Apply typing animation */
+    z-index: 1; /* Set a higher z-index value for the typewriter text */
+}
+
+.custom-text {
+    position: absolute; /* Position element precisely */
+    left: 4%; /* Offset 10% from the left */
+    top: 58%; /* Center vertically at 50% from the top */
+    transform: translateY(-50%); /* Adjust vertical position */
+    text-align: left; /* Align text to the left */
+}
+
+.custom-text p {
+    font-size: 18px; /* Set font size to 30 pixels */
+    line-height: 1.5; /* Set line height for better readability */
+}
+
+
+/* Keyframe animation for typewriter effect */
+@keyframes typing {
+    from {
+        width: 0; /* Start with 0 width */
+    }
+
+    to {
+        width: 100%; /* End with 100% width */
+    }
+}
+
+/* Keyframe animation for blinking caret in typewriter effect */
+@keyframes blink-caret {
+    from,
+    to {
+        border-color: transparent; /* Set caret color to transparent */
+    }
+
+    50% {
+        border-color: ghostwhite; /* Set caret color to white at 50% of the animation */
+    }
+}
+
+.linkedin-image img,
+.github-image img,
+.resume-image img,
+.email-image img {
+    max-width: 100%; /* Ensure the image takes the full width of its parent container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.linkedin-image {
+    position: fixed; /* Fix the image positions */
+    top: 37vh; /* Place the images vertically from the top */
+    transform: translateY(-50%); /* Center the images vertically */
+    width: 148px; /* Set the width of the images */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 1; /* Set z-index higher than the background but lower than the navbar */
+}
+
+.github-image {
+    position: fixed; /* Fix the image positions */
+    top: 37vh; /* Place the images vertically from the top */
+    transform: translateY(-50%); /* Center the images vertically */
+    width: 154px; /* Set the width of the images */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 1; /* Set z-index higher than the background but lower than the navbar */
+}
+
+.resume-image {
+    position: fixed; /* Fix the image position */
+    top: 37vh; /* Place the image at the top */
+    transform: translateX(-50%); /* Move image to the left center of the top half */
+    z-index: 1; /* Set z-index higher than the background and other elements */
+    width: 140px; /* Set the width of the resume image */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.email-image {
+    position: fixed; /* Fix the image positions */
+    top: 37vh; /* Place the images at the bottom */
+    transform: translateX(-50%); /* Move image to the left center of the bottom half */
+    z-index: 1; /* Set z-index higher than the background and other elements */
+    width: 140px; /* Set the width of the email icon */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Horizontal stacking of images with more spacing and even distribution */
+.linkedin-image {
+    left: 40px; /* Adjust the left position as needed */
+    bottom: 10px; /* Adjust the bottom position as needed */
+}
+
+.github-image {
+    left: 280px; /* Adjust the left position as needed for increased spacing */
+    bottom: 10px; /* Adjust the bottom position as needed */
+}
+
+.resume-image {
+    left: 850px; /* Adjust the left position as needed for increased spacing */
+    bottom: 10px; /* Adjust the bottom position as needed */
+}
+
+.email-image {
+    left: 1090px; /* Adjust the left position as needed for increased spacing */
+    bottom: 10px; /* Adjust the bottom position as needed */
+}
+
+/* Set initial zoom level for all images */
+.linkedin-image img,
+.github-image img,
+.resume-image img,
+.email-image img {
+    transform: scale(1); /* Set initial scale to normal size */
+    transition: transform 0.6s ease; /* Apply a smooth transition effect for zoom */
+}
+
+/* Zoom in effect on hover for LinkedIn image */
+.linkedin-image:hover img {
+    transform: scale(1.3); /* Scale the image to 1.4 times its original size on hover */
+}
+
+/* Zoom in effect on hover for GitHub image */
+.github-image:hover img {
+    transform: scale(1.3); /* Scale the image to 1.4 times its original size on hover */
+}
+
+/* Zoom in effect on hover for Resume image */
+.resume-image:hover img {
+    transform: scale(1.3); /* Scale the image to 1.4 times its original size on hover */
+}
+
+/* Zoom in effect on hover for Email image */
+.email-image:hover img {
+    transform: scale(1.3); /* Scale the image to 1.4 times its original size on hover */
+}
+
+@keyframes float-linkedin {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-40px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Apply float-left animation with specified properties */
+.float-linkedin {
+    transform:  translateY(0); /* Initial position */
+    animation: float-linkedin 4s ease infinite forwards; /* Animation name, duration, and timing function */
+}
+
+@keyframes float-github {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-40px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Apply float-right animation with specified properties */
+.float-github {
+    transform:  translateY(0); /* Initial position */
+    animation: float-github 4s ease 0.4s infinite forwards; /* Animation name, duration, and timing function */
+}
+
+@keyframes float-cv {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-40px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Apply float-up animation with specified properties */
+.float-cv {
+    transform:  translateY(0); /* Initial position */
+    animation: float-cv 4s ease 0.8s infinite forwards; /* Animation name, duration, and timing function */
+}
+
+@keyframes float-email {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-40px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Apply float-down animation with specified properties */
+.float-email {
+    transform:  translateY(0); /* Initial position */
+    animation: float-email 4s ease 1.2s infinite forwards; /* Animation name, duration, and timing function */
+}
+

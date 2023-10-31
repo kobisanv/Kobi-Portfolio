@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="logo_2.png" style="max-width: 100%; height: auto;">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Into the World of Me" />
+    <title>Into the World of Me</title>
+    <link rel ="stylesheet" href="./style.css">
+    <script src = "cdnjs.cloudflare.com_ajax_libs_three.js_r134_three.min.js"></script>
+    <script src = "cdn.jsdelivr.net_npm_vanta@latest_dist_vanta.globe.min.js"></script>
+</head>
+
+<body>
+<header>
+    <div class="logo">
+        <img src="logo.png" alt="logo">
+    </div>
+    <nav>
+        <ul>
+            <li><a class="home-link" href="index.html">Home</a></li>
+            <li><a class="about-link" href="aboutme.html">About Me</a></li>
+            <li><a class="projects-link" href="projects.html">Projects</a></li>
+            <li><a class="contact-link" href="contact.html">Contact Me</a></li>
+        </ul>
+    </nav>
+</header>
+<div id="vanta-bg"></div>
+
+<div class="typewriter custom-text">
+    <p>Hello, my name is Kobisan Vinotharupan.</p>
+    <p>I am a computer science student</p>
+    <p>at Ontario Tech University,</p>
+    <p>actively searching for tech internships.</p>
+    <p>I find passion in emerging technologies,</p>
+    <p>namely blockchain and AI.</p>
+    <p>I am striving to make a product</p>
+    <p>which unifies these technologies</p>
+    <p>into something that could better</p>
+    <p>the ever-changing financial world.</p>
+    <p>To learn more about me and my specialties,</p>
+    <p>please click the Projects link up top.</p>
+</div>
+
+<div id="root"></div>
+
+<script>
+    // Initialize Vanta.GLOBE background animation
+    VANTA.GLOBE({
+        el: "#vanta-bg",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: window.innerHeight,
+        minWidth: window.innerWidth,
+        scale: 1.00,
+        scaleMobile: 1.00,
+        color: 0xffffff,
+        backgroundColor: 0x0
+    });
+</script>
+
+</body>
+
+</html>
