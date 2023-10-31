@@ -228,22 +228,22 @@ body {
 
 /* Horizontal stacking of images with more spacing and even distribution */
 .linkedin-image {
-    left: 40px; /* Adjust the left position as needed */
+    left: 20px; /* Adjust the left position as needed */
     bottom: 10px; /* Adjust the bottom position as needed */
 }
 
 .github-image {
-    left: 280px; /* Adjust the left position as needed for increased spacing */
+    left: 260px; /* Adjust the left position as needed for increased spacing */
     bottom: 10px; /* Adjust the bottom position as needed */
 }
 
 .resume-image {
-    left: 850px; /* Adjust the left position as needed for increased spacing */
+    left: 870px; /* Adjust the left position as needed for increased spacing */
     bottom: 10px; /* Adjust the bottom position as needed */
 }
 
 .email-image {
-    left: 1090px; /* Adjust the left position as needed for increased spacing */
+    left: 1110px; /* Adjust the left position as needed for increased spacing */
     bottom: 10px; /* Adjust the bottom position as needed */
 }
 
