@@ -228,12 +228,12 @@ body {
 
 /* Horizontal stacking of images with more spacing and even distribution */
 .linkedin-image {
-    left: 20px; /* Adjust the left position as needed */
+    left: 10px; /* Adjust the left position as needed */
     bottom: 10px; /* Adjust the bottom position as needed */
 }
 
 .github-image {
-    left: 260px; /* Adjust the left position as needed for increased spacing */
+    left: 250px; /* Adjust the left position as needed for increased spacing */
     bottom: 10px; /* Adjust the bottom position as needed */
 }
 
