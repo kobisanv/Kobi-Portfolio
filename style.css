@@ -147,15 +147,15 @@ body {
 
 .custom-text {
     position: absolute; /* Position element precisely */
-    left: 4%; /* Offset 10% from the left */
-    top: 58%; /* Center vertically at 50% from the top */
+    left: 6%; /* Offset 10% from the left */
+    top: 52%; /* Center vertically at 50% from the top */
     transform: translateY(-50%); /* Adjust vertical position */
     text-align: left; /* Align text to the left */
 }
 
 .custom-text p {
     font-size: 18px; /* Set font size to 30 pixels */
-    line-height: 1.5; /* Set line height for better readability */
+    line-height: 1; /* Set line height for better readability */
 }
 
 
@@ -228,23 +228,23 @@ body {
 
 /* Horizontal stacking of images with more spacing and even distribution */
 .linkedin-image {
-    left: 30px; /* Adjust the left position as needed */
-    bottom: 10px; /* Adjust the bottom position as needed */
+    left: 2%; /* Adjust the left position as needed */
+    bottom: 1.76%; /* Adjust the bottom position as needed */
 }
 
 .github-image {
-    left: 270px; /* Adjust the left position as needed for increased spacing */
-    bottom: 10px; /* Adjust the bottom position as needed */
+    left: 21.1%; /* Adjust the left position as needed for increased spacing */
+    bottom: 1.76%; /* Adjust the bottom position as needed */
 }
 
 .resume-image {
-    left: 850px; /* Adjust the left position as needed for increased spacing */
-    bottom: 10px; /* Adjust the bottom position as needed */
+    right: 21.1%; /* Adjust the left position as needed for increased spacing */
+    bottom: 1.76%; /* Adjust the bottom position as needed */
 }
 
 .email-image {
-    left: 1075px; /* Adjust the left position as needed for increased spacing */
-    bottom: 10px; /* Adjust the bottom position as needed */
+    right: 2%; /* Adjust the left position as needed for increased spacing */
+    bottom: 1.76%; /* Adjust the bottom position as needed */
 }
 
 /* Set initial zoom level for all images */
