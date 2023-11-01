@@ -122,12 +122,14 @@ body {
     width: 100vw; /* Set element width to 100% of viewport width */
     height: 100vh; /* Set element height to 100% of viewport height */
     z-index: -1; /* Set a lower z-index value for the background */
+    background-size: contain;
 }
 
 /* Typewriter effect animation for an h1 element within an element with class 'typewriter' */
 .typewriter h1 {
+    position: relative; /* Add a positioning context to the typewriter */
     overflow: hidden; /* Hide overflowing content */
-    border-right: 0.1em ghostwhite; /* Create a typing cursor effect with a right border */
+    border-right: 2px solid ghostwhite; /* Create a typing cursor effect with a right border */
     white-space: nowrap; /* Prevent text from wrapping */
     margin: 0 auto; /* Center the element horizontally */
     letter-spacing: 0.15em; /* Set letter spacing */
@@ -137,11 +139,10 @@ body {
 
 .typewriter p {
     overflow: hidden; /* Hide overflowing content */
-    border-right: 0.1em ghostwhite; /* Create a typing cursor effect with a right border */
     white-space: nowrap; /* Prevent text from wrapping */
     margin: 0 auto; /* Center the element horizontally */
     letter-spacing: 0.15em; /* Set letter spacing */
-    animation: typing 3s steps(40, end), blink-caret 1s step-end infinite; /* Apply typing animation */
+    animation: typing 3s steps(40, end); /* Apply typing animation */
     z-index: 1; /* Set a higher z-index value for the typewriter text */
 }
 
@@ -157,7 +158,6 @@ body {
     font-size: 18px; /* Set font size to 30 pixels */
     line-height: 1; /* Set line height for better readability */
 }
-
 
 /* Keyframe animation for typewriter effect */
 @keyframes typing {
