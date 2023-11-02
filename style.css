@@ -122,7 +122,55 @@ body {
     width: 100vw; /* Set element width to 100% of viewport width */
     height: 100vh; /* Set element height to 100% of viewport height */
     z-index: -1; /* Set a lower z-index value for the background */
-    background-size: contain;
+    background-size: cover; /* Set initial background size */
+    background-position: center center; /* Set initial background position to center */
+
+    /* Add vendor prefixes for better browser compatibility */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+/* Adjust background size for different zoom levels */
+@media screen and (min-resolution: 1.10dppx) {
+    #vanta-bg {
+        background-size: 110%; /* Increase background size for higher zoom levels */
+        background-position: center center; /* Set initial background position to center */
+    }
+}
+
+/* Adjust background size for different zoom levels */
+@media screen and (min-resolution: 1.25dppx) {
+    #vanta-bg {
+        background-size: 125%; /* Increase background size for higher zoom levels */
+        background-position: center center; /* Set initial background position to center */
+    }
+}
+
+/* Adjust background size for different zoom levels */
+@media screen and (min-resolution: 1.50dppx) {
+    #vanta-bg {
+        background-size: 150%; /* Increase background size for higher zoom levels */
+        background-position: center center; /* Set initial background position to center */
+    }
+}
+
+/* Adjust background size for different zoom levels */
+@media screen and (min-resolution: 1.75dppx) {
+    #vanta-bg {
+        background-size: 175%; /* Increase background size for higher zoom levels */
+        background-position: center center; /* Set initial background position to center */
+
+    }
+}
+
+/* Adjust background size for different zoom levels */
+@media screen and (min-resolution: 2dppx) {
+    #vanta-bg {
+        background-size: 200%; /* Increase background size for higher zoom levels */
+        background-position: center center; /* Set initial background position to center */
+    }
 }
 
 /* Typewriter effect animation for an h1 element within an element with class 'typewriter' */
@@ -132,6 +180,7 @@ body {
     border-right: 2px solid ghostwhite; /* Create a typing cursor effect with a right border */
     white-space: nowrap; /* Prevent text from wrapping */
     margin: 0 auto; /* Center the element horizontally */
+    font-size: 40px; /* Set font size to 30 pixels */
     letter-spacing: 0.15em; /* Set letter spacing */
     animation: typing 3s steps(40, end), blink-caret 1s step-end infinite; /* Apply typing animation */
     z-index: 1; /* Set a higher z-index value for the typewriter text */
@@ -156,6 +205,7 @@ body {
 
 .custom-text p {
     font-size: 18px; /* Set font size to 30 pixels */
+    font-weight: bolder; /* Set font weight to bolder */
     line-height: 1; /* Set line height for better readability */
 }
 
