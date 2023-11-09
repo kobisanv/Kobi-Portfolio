@@ -99,6 +99,12 @@ nav ul li a {
     font-weight: bolder; /* Set bolder font weight on hover */
     font-size: 30px; /* Increase font size on hover */
 }
+.email-link:hover {
+    color: ghostwhite; /* Change link text color on hover */
+    transition: 0.7s; /* Apply smooth transition effect */
+    font-weight: bolder; /* Set bolder font weight on hover */
+    font-size: 30px; /* Increase font size on hover */
+}
 
 /* Additional styling for the body element */
 body {
@@ -186,6 +192,18 @@ body {
     z-index: 1; /* Set a higher z-index value for the typewriter text */
 }
 
+.typewriter h2 {
+    position: relative; /* Add a positioning context to the typewriter */
+    overflow: hidden; /* Hide overflowing content */
+    border-right: 2px solid ghostwhite; /* Create a typing cursor effect with a right border */
+    white-space: nowrap; /* Prevent text from wrapping */
+    margin: 0 auto; /* Center the element horizontally */
+    font-size: 30px; /* Set font size to 30 pixels */
+    letter-spacing: 0.15em; /* Set letter spacing */
+    animation: typing 2s steps(40, end), blink-caret 1s step-end infinite; /* Apply typing animation */
+    z-index: 1; /* Set a higher z-index value for the typewriter text */
+}
+
 .typewriter p {
     overflow: hidden; /* Hide overflowing content */
     white-space: nowrap; /* Prevent text from wrapping */
@@ -198,7 +216,7 @@ body {
 .custom-text {
     position: absolute; /* Position element precisely */
     left: 6%; /* Offset 10% from the left */
-    top: 52%; /* Center vertically at 50% from the top */
+    top: 50.5%; /* Center vertically at 50% from the top */
     transform: translateY(-50%); /* Adjust vertical position */
     text-align: left; /* Align text to the left */
 }
@@ -406,3 +424,54 @@ body {
     animation: float-email 4s ease 1.2s infinite forwards; /* Animation name, duration, and timing function */
 }
 
+/* Container to center the form and set background */
+.container {
+    display: flex; /* Apply flexbox */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    height: 100vh; /* Set height to 100% of the viewport height */
+    background: rgba(0, 0, 0, 0); /* Set a semi-transparent background */
+}
+
+/* Styling for the form container */
+.form-container {
+    background: rgba(255, 255, 255, 0.0); /* Set a transparent white background */
+    padding: 2.34%; /* Add padding inside the form container */
+    border-radius: 1.95%; /* Add rounded corners to the form container */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.0); /* Apply a box shadow with zero blur and transparent color */
+    width: 80vw; /* Set the width of the form container to 80% of the viewport width */
+    max-width: 70%; /* Set maximum width to prevent the form from becoming too wide on larger screens */
+    margin-top: 7.29%; /* Add top margin to the form container */
+}
+
+/* Styling for form label */
+.form-container label {
+    margin: 0.78% 0; /* Add top and bottom margin to form labels */
+    font-size: 15px; /* Set font size for form labels */
+    font-family: 'Ostrich Sans', sans-serif; /* Set font family for form labels */
+    font-weight: bold; /* Set font weight to bold for form labels */
+}
+
+/* Styling for form button */
+.form-container button {
+    margin: 0.5% 0; /* Add top and bottom margin to form button */
+    font-size: 15px; /* Set font size for the form button */
+    padding: 5px 10px; /* Add padding to the form button to make it bigger */
+    font-family: 'Ostrich Sans', sans-serif; /* Set font family for the form button */
+    font-weight: normal; /* Set font weight to normal for the form button */
+    color: ghostwhite; /* Set text color of the form button */
+    cursor: pointer; /* Change cursor to pointer on hover for the form button */
+}
+
+/* Styling for form inputs and textarea */
+.form-container input,
+.form-container textarea {
+    margin: 0.78% 0; /* Add top and bottom margin to form inputs and textarea */
+    width: 100%; /* Set the width of form inputs and textarea to 100% */
+    padding: 6%; /* Add padding inside form inputs and textarea */
+    border-radius: 0.39%; /* Add a slight border radius to form inputs and textarea */
+    background: ghostwhite; /* Set background color for form inputs and textarea */
+    font-size: 14px; /* Set font size for form inputs and textarea */
+    font-family: 'Calibri', sans-serif; /* Set font family for form inputs and textarea */
+    font-weight: normal; /* Set font weight to normal for form inputs and textarea */
+}
