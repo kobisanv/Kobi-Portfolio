@@ -135,7 +135,6 @@ body {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;
 }
 
 /* Adjust background size for different zoom levels */
@@ -456,7 +455,7 @@ body {
 .form-container button {
     margin: 0.5% 0; /* Add top and bottom margin to form button */
     font-size: 15px; /* Set font size for the form button */
-    padding: 5px 10px; /* Add padding to the form button to make it bigger */
+    padding: 0.39% 0.78%; /* Add padding to the form button to make it bigger */
     font-family: 'Ostrich Sans', sans-serif; /* Set font family for the form button */
     font-weight: normal; /* Set font weight to normal for the form button */
     color: ghostwhite; /* Set text color of the form button */
@@ -468,7 +467,7 @@ body {
 .form-container textarea {
     margin: 0.78% 0; /* Add top and bottom margin to form inputs and textarea */
     width: 100%; /* Set the width of form inputs and textarea to 100% */
-    padding: 6%; /* Add padding inside form inputs and textarea */
+    padding: 4%; /* Add padding inside form inputs and textarea */
     border-radius: 0.39%; /* Add a slight border radius to form inputs and textarea */
     background: ghostwhite; /* Set background color for form inputs and textarea */
     font-size: 14px; /* Set font size for form inputs and textarea */

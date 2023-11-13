@@ -10,7 +10,6 @@
     <link rel ="stylesheet" href="./style.css">
     <script src = "cdnjs.cloudflare.com_ajax_libs_three.js_r134_three.min.js"></script>
     <script src = "cdn.jsdelivr.net_npm_vanta@latest_dist_vanta.birds.min.js"></script>
-    <script src = "https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
@@ -34,17 +33,17 @@
         <div class = "typewriter custom-text">
             <h2>Email Me!</h2>
         </div>
-        <form id="contact-form" method="post" action="contact-form-handler.php">
-            <label for="email">Your Email:</label>
+        <form id="contact-form">
+            <label for="email">Email:</label>
             <input type="email" id="email" name="email" required><br>
 
             <label for="subject">Subject:</label>
             <input type="text" id="subject" name="subject" required><br>
 
-            <label for="message">Message:</label><br>
+            <label for="message">Message (Please Include Your Name):</label><br>
             <textarea id="message" name="message" rows="4" cols="30" required></textarea><br>
 
-            <button type="submit">Send</button>
+            <button id="submitBtn" type="submit">Send</button>
         </form>
     </div>
 </div>
@@ -71,6 +70,40 @@
         cohesion: 100.00,
         quantity: 4.00
     });
+</script>
+
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+    emailjs.init('yZVvJf75mMKn1rwV0');
+    const form = document.querySelector("#contact-form");
+    function sendEmail() {
+        console.log('Form element:', form);
+        if (form) {
+            emailjs.sendForm("service_jj1bdmt", "template_uls72su", form, 'yZVvJf75mMKn1rwV0')
+                .then (
+                    function(response) {
+                        console.log('Email sent successfully: ', response);
+                        window.location.href = "emailsuccess.html";
+                    },
+                    function(error) {
+                        console.error('Email not sent. Error: ', error);
+                        window.location.href = "emailnotsuccess.html";
+                    }
+                );
+        } else {
+            console.error('Form element not found');
+        }
+    }
+
+    // Attach sendEmail function to the button click event
+    const submitBtn = document.getElementById("submitBtn");
+    if (submitBtn) {
+        submitBtn.addEventListener("click", function(event) {
+            event.preventDefault(); // Prevent default form submission
+            console.log("Button was clicked");
+            sendEmail(); // Call sendEmail function
+        });
+    }
 </script>
 
 </body>
