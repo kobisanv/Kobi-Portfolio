@@ -38,8 +38,8 @@ header {
 
 /* Styling for the logo within the header */
 .logo {
-    margin-top: 10px;
-    margin-right: 25px; /* Set right margin for the logo so logo doesn't sit at left edge */
+    margin-top: 0.55%;
+    margin-right: 1.95%; /* Set right margin for the logo so logo doesn't sit at left edge */
 }
 
 .logo img {
@@ -51,7 +51,7 @@ header {
 nav ul {
     list-style: none; /* Remove default list styles (bullet points, etc.) */
     text-align: center; /* Center the text within the <nav> element */
-    margin: 0; /* Remove any default margin */
+    margin-bottom: 2.8%; /* Remove any default margin */
     padding: 0; /* Remove any default padding */
     display: flex; /* Use flexbox for layout */
 }
