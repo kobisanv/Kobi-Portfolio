@@ -4,9 +4,9 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require 'PHPMailer/src/Exception.php';
-require 'PHPMailer/src/PHPMailer.php';
-require 'PHPMailer/src/SMTP.php';
+require 'Exception.php';
+require 'PHPMailer.php';
+require 'SMTP.php';
 
 // Check if the request method is POST
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
