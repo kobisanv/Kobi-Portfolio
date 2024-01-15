@@ -325,12 +325,12 @@ body {
 
 /* Zoom in effect on hover for LinkedIn image */
 .linkedin-image:hover img {
-    transform: scale(1.1); /* Scale the image to 1.4 times its original size on hover */
+    transform: scale(1.2); /* Scale the image to 1.4 times its original size on hover */
 }
 
 /* Zoom in effect on hover for GitHub image */
 .github-image:hover img {
-    transform: scale(1.1); /* Scale the image to 1.4 times its original size on hover */
+    transform: scale(1.2); /* Scale the image to 1.4 times its original size on hover */
 }
 
 /* Zoom in effect on hover for Resume image */
