@@ -99,6 +99,7 @@ nav ul li a {
     font-weight: bolder; /* Set bolder font weight on hover */
     font-size: 30px; /* Increase font size on hover */
 }
+
 .email-link:hover {
     color: ghostwhite; /* Change link text color on hover */
     transition: 0.7s; /* Apply smooth transition effect */
