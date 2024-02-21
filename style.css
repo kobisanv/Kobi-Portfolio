@@ -14,6 +14,23 @@ body {
     overflow: hidden; /* Hide overflowing content */
     overflow-y: scroll; /* Enable vertical scrolling if content overflows */
     font-family: 'Ostrich Sans', sans-serif; /* Set custom font family */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Additional styling for the body element */
+body {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Arrange child elements in a column */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    height: 100vh; /* Set body height to 100% of viewport height */
+    margin: 0; /* Remove margins */
+    background: black; /* Set background color to black */
+    color: ghostwhite; /* Set text color to white */
+    overflow: hidden; /* Hide overflowing content */
+    font-family: 'Ostrich Sans', sans-serif; /* Set font family */
 }
 
 /* Define a custom font face for 'Ostrich Sans' */
@@ -86,7 +103,7 @@ nav ul li a {
     font-size: 30px; /* Increase font size on hover */
 }
 
-.projects-link:hover {
+.project-link:hover {
     color: ghostwhite; /* Change link text color on hover */
     transition: 0.7s; /* Apply smooth transition effect */
     font-weight: bolder; /* Set bolder font weight on hover */
@@ -105,20 +122,6 @@ nav ul li a {
     transition: 0.7s; /* Apply smooth transition effect */
     font-weight: bolder; /* Set bolder font weight on hover */
     font-size: 30px; /* Increase font size on hover */
-}
-
-/* Additional styling for the body element */
-body {
-    display: flex; /* Use flexbox for layout */
-    flex-direction: column; /* Arrange child elements in a column */
-    justify-content: center; /* Center content vertically */
-    align-items: center; /* Center content horizontally */
-    height: 100vh; /* Set body height to 100% of viewport height */
-    margin: 0; /* Remove margins */
-    background: black; /* Set background color to black */
-    color: ghostwhite; /* Set text color to white */
-    overflow: hidden; /* Hide overflowing content */
-    font-family: 'Ostrich Sans', sans-serif; /* Set font family */
 }
 
 /* Styling for an element with id 'vanta-bg' */
@@ -195,12 +198,12 @@ body {
 .typewriter h2 {
     position: relative; /* Add a positioning context to the typewriter */
     overflow: hidden; /* Hide overflowing content */
-    border-right: 2px solid ghostwhite; /* Create a typing cursor effect with a right border */
     white-space: nowrap; /* Prevent text from wrapping */
     margin: 0 auto; /* Center the element horizontally */
     font-size: 30px; /* Set font size to 30 pixels */
     letter-spacing: 0.15em; /* Set letter spacing */
-    animation: typing 2s steps(40, end), blink-caret 1s step-end infinite; /* Apply typing animation */
+    animation: typing 5s steps(75, end); /* Apply typing animation */
+    text-align: center; /* Set text alignment */
     z-index: 1; /* Set a higher z-index value for the typewriter text */
 }
 
@@ -211,18 +214,11 @@ body {
     letter-spacing: 0.15em; /* Set letter spacing */
     animation: typing 3s steps(40, end); /* Apply typing animation */
     z-index: 1; /* Set a higher z-index value for the typewriter text */
-}
-
-.custom-text {
-    position: absolute; /* Position element precisely */
-    left: 6%; /* Offset 10% from the left */
-    top: 50.5%; /* Center vertically at 50% from the top */
-    transform: translateY(-50%); /* Adjust vertical position */
-    text-align: left; /* Align text to the left */
+    text-align: center; /* Set text alignment */ 
 }
 
 .custom-text p {
-    font-size: 18px; /* Set font size to 30 pixels */
+    font-size: 25px; /* Set font size to 30 pixels */
     font-weight: bolder; /* Set font weight to bolder */
     line-height: 1; /* Set line height for better readability */
 }
@@ -326,12 +322,12 @@ body {
 
 /* Zoom in effect on hover for LinkedIn image */
 .linkedin-image:hover img {
-    transform: scale(1.2); /* Scale the image to 1.4 times its original size on hover */
+    transform: scale(1.3); /* Scale the image to 1.4 times its original size on hover */
 }
 
 /* Zoom in effect on hover for GitHub image */
 .github-image:hover img {
-    transform: scale(1.2); /* Scale the image to 1.4 times its original size on hover */
+    transform: scale(1.3); /* Scale the image to 1.4 times its original size on hover */
 }
 
 /* Zoom in effect on hover for Resume image */
@@ -474,4 +470,79 @@ body {
     font-size: 14px; /* Set font size for form inputs and textarea */
     font-family: 'Calibri', sans-serif; /* Set font family for form inputs and textarea */
     font-weight: normal; /* Set font weight to normal for form inputs and textarea */
+}
+
+.carousel {
+    position: relative;
+    width: 1400px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.cards {
+    display: flex;
+    animation: scrollAnimation 10s linear infinite;
+}
+
+.card {
+    position: relative;
+    width: 450px; /* Adjust the width as needed */
+    height: 450px;
+    margin-right: 40px;
+    background: none; /* Remove the black background */
+    color: ghostwhite; /* Make the text white */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 17px;
+    text-align: center;
+    border-radius: 15px; /* Add rounded edges */
+    filter: grayscale(100%);
+    transform: scale(1);
+    transition: filter 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.text-container {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background for the text */
+    border-radius: 0 0 15px 15px; /* Rounded edges only at the bottom */
+    position: absolute;
+    bottom: 0;
+}
+
+.card a {
+    color: ghostwhite;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.card:hover {
+    filter: grayscale(0%);
+    transform: scale(1.1) translateY(20px);
+}
+
+.jack-card, .chip-card, .rust-card, .ten-card {
+    background-size: 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.jack-card {
+    background-image: url('python.png');
+}
+
+.chip-card {
+    background-image: url('cpp.png');
+}
+
+.rust-card {
+    background-image: url('rust.png');
+}
+
+.ten-card {
+    background-image: url('tensorflow.png');
 }

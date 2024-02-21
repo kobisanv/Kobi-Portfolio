@@ -3,13 +3,15 @@
 
 <head>
   <link rel="icon" href="logo_2.png" style="max-width: 100%; height: auto;">
-  <meta name="viewport" content="width=device-width, initial-scale=0.1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#000000" />
   <meta name="description" content="My Projects" />
   <title>My Projects</title>
   <link rel ="stylesheet" href="./style.css">
   <script src = "cdnjs.cloudflare.com_ajax_libs_three.js_r134_three.min.js"></script>
   <script src = "cdn.jsdelivr.net_npm_vanta@latest_dist_vanta.dots.min.js"></script>
+  <script src='https://unpkg.co/gsap@3/dist/gsap.min.js'></script>
+  <script src='https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js'></script>
 </head>
 
 <body>
@@ -21,6 +23,7 @@
     <ul>
       <li><a class="home-link" href="index.html">Home</a></li>
       <li><a class="about-link" href="aboutme.html">About Me</a></li>
+      <li><a class="project-link" href="projects.html">Projects</a></li>
       <li><a class="contact-link" href="contact.html">Contact</a></li>
       <li><a class="email-link" href="email.html">Email Me</a></li>
     </ul>
@@ -28,8 +31,29 @@
 </header>
 
 <div id="vanta-bg"></div>
-<div class="typewriter">
-  <h2>Coming soon...</h2>
+<div class="carousel">
+  <ul class="cards">
+    <li class="card">
+      <a href="https://github.com/kobisanv/Jack_Jump" class="jack-card">
+        <div class="text-container">Jack Jump - Doodle Jump, but with a twist, Built With PyGame</div>
+      </a>
+    </li>
+    <li class="card">
+      <a href="https://github.com/kobisanv/CHIPATEPLUSDL-KOBZ" class="chip-card">
+        <div class="text-container">CHIP-8 Emulator - A Console Emulator in C++ for the CHIP-8</div>
+      </a>
+    </li>
+    <li class="card">
+      <a href="https://github.com/kobisanv/Rusty6502-KOBZ" class="rust-card">
+        <div class="text-container">6502 Emulator - An Emulator for the 6502 CPU, Built with Rust</div>
+      </a>
+    </li>
+    <li class="card">
+      <a href="https://github.com/kobisanv/Crypto-Predictor" class="ten-card">
+        <div class="text-container">Crypto Predictor - An AI Model Built with Keras to predict crypto prices</div>
+      </a>
+    </li>
+  </ul>
 </div>
 <div id="root"></div>
 
@@ -42,7 +66,7 @@
     gyroControls: false,
     minHeight: window.innerHeight,
     minWidth: window.innerWidth,
-    scale: 1.00,
+    scale: 2.00,
     scaleMobile: 1.00,
     color: 0xffffff,
     backgroundColor: 0x0,
