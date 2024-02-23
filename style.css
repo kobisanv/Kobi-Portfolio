@@ -491,17 +491,17 @@ nav ul li a {
 
 .card {
     position: relative;
-    width: 450px; /* Adjust the width as needed */
+    width: 450px;
     height: 450px;
-    margin-right: 40px;
-    background: none; /* Remove the black background */
-    color: ghostwhite; /* Make the text white */
+    margin-right: 3.125%;
+    background: none;
+    color: ghostwhite;
     display: flex;
     flex-direction: column;
     align-items: center;
     font-size: 17px;
     text-align: center;
-    border-radius: 15px; /* Add rounded edges */
+    border-radius: 1.17%;
     filter: grayscale(100%);
     transform: scale(1);
     transition: filter 0.5s ease-in-out, transform 0.5s ease-in-out;
@@ -509,10 +509,10 @@ nav ul li a {
 
 .text-container {
     width: 100%;
-    padding: 8px;
+    padding: 0.62%;
     box-sizing: border-box;
-    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background for the text */
-    border-radius: 0 0 15px 15px; /* Rounded edges only at the bottom */
+    background: rgba(0, 0, 0, 0.7); 
+    border-radius: 1.17%;
     position: absolute;
     bottom: 0;
 }
@@ -527,7 +527,7 @@ nav ul li a {
 
 .card:hover {
     filter: grayscale(0%);
-    transform: scale(1.1) translateY(20px);
+    transform: scale(1.1) translateY(1.56%);
 }
 
 .jack-card, .chip-card, .rust-card, .ten-card {
