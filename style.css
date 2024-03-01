@@ -525,22 +525,7 @@ nav ul li a {
     height: 100%;
 }
 
-.jack-card:hover {
-    filter: grayscale(0%);
-    transform: scale(1.145) translateY(4%);
-}
-
-.chip-card:hover {
-    filter: grayscale(0%);
-    transform: scale(1.145) translateY(4%);
-}
-
-.rust-card:hover {
-    filter: grayscale(0%);
-    transform: scale(1.145) translateY(4%);
-}
-
-.ten-card:hover {
+.card:hover {
     filter: grayscale(0%);
     transform: scale(1.145) translateY(7%);
 }
@@ -549,7 +534,6 @@ nav ul li a {
     background-size: 100%;
     background-repeat: no-repeat;
     cursor: pointer;
-    transition: filter 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
 .jack-card {
