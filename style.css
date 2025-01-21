@@ -477,62 +477,63 @@ nav ul li a {
     font-weight: normal; /* Set font weight to normal for form inputs and textarea */
 }
 
+/* General carousel container styling */
 .carousel {
-    position: relative;
-    width: 1400px;
-    margin: auto;
-    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 50px auto;
+    padding: 20px 0;
 }
 
+/* Cards container */
 .cards {
     display: flex;
-    animation: scrollAnimation 10s linear infinite;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
+/* Individual card styling */
 .card {
-    position: relative;
-    width: 450px;
-    height: 450px;
-    margin-right: 3.125%;
+    width: 350px;
+    height: 350px;
     background: none;
     color: ghostwhite;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: flex-end;
     font-size: 17px;
     text-align: center;
-    border-radius: 1.17%;
-    filter: grayscale(100%);
-    transform: scale(1);
-    transition: filter 0.5s ease-in-out, transform 0.5s ease-in-out;
-}
-
-.text-container {
-    width: 100%;
-    padding: 0.62%;
-    box-sizing: border-box;
-    background: rgba(0, 0, 0, 0.7); 
-    border-radius: 1.17%;
-    position: absolute;
-    bottom: 0;
-}
-
-.card a {
-    color: ghostwhite;
-    text-decoration: none;
-    display: block;
-    width: 100%;
-    height: 100%;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7), -5px -5px 10px rgba(255, 255, 255, 0.1);
+    transition: transform 0.5s ease, box-shadow 0.5s ease, filter 0.5s ease; /* Smooth transitions */
+    position: relative;
+    overflow: hidden;
+    filter: grayscale(100%); /* Black and white by default */
 }
 
 .card:hover {
-    filter: grayscale(0%);
-    transform: scale(1.145) translateY(7%);
+    transform: scale(1.1); /* Zoom in */
+    filter: grayscale(0%); /* Transition to color */
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.8), -8px -8px 20px rgba(255, 255, 255, 0.2);
 }
 
+/* Card background images */
 .jack-card, .chip-card, .rust-card, .ten-card {
-    background-size: 100%;
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 10px;
     cursor: pointer;
 }
 
@@ -550,4 +551,62 @@ nav ul li a {
 
 .ten-card {
     background-image: url('tensorflow.png');
+}
+
+/* Text container styling */
+.text-container {
+    width: 100%;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 0 0 10px 10px;
+    position: absolute;
+    bottom: 0;
+    box-sizing: border-box;
+    color: ghostwhite;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    transition: transform 0.5s ease, background 0.5s ease; /* Smooth transitions for hover effects */
+    z-index: 1;
+}
+
+.card:hover .text-container {
+    background: rgba(0, 0, 0, 0.85);
+    transform: translateY(10%); /* Moves the text down slightly */
+}
+
+/* Anchor links inside the cards */
+.card a {
+    color: ghostwhite;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .card {
+        width: 90%;
+        height: 300px;
+    }
+
+    .text-container {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        height: 250px;
+    }
+
+    .text-container {
+        font-size: 12px;
+        padding: 8px;
+    }
 }
